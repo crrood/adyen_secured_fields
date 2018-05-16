@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<script type="text/javascript" src="https://checkoutshopper-test.adyen.com/checkoutshopper/assets/js/sdk/checkoutSecuredFields.1.1.3.js"></script>
+	<script type="text/javascript" src="https://checkoutshopper-test.adyen.com/checkoutshopper/js/checkoutInitiatePayment.min.js"></script>
+	<script type="text/javascript" src="scripts/securedFields.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/style.css"></link>
+</head>
+
+<body>
+
+	<h3>Payment info</h3>
+	<div class="block">
+		<form id="paymentForm" class="clientForm" >
+			Value: <input type="text" class="payment-data" name="value" value="1500"/><br>
+			Currency: <input type="text" class="payment-data" name="currency" value="USD"/><br>
+			Reference: <input type="text" class="payment-data" name="reference" value="Localhost Secured Fields"/><br>
+			CountryCode: <input type="text" class="payment-data" name="countryCode" value="US"/><br>
+			ShopperLocale: <input type="text" class="payment-data" name="shopperLocale" value="en_GB"/><br>
+			Channel: <input type="text" class="payment-data" name="channel" value="Web"/><br>
+			ShopperReference: <input type="text" class="payment-data" name="shopperReference" value="Shopper1"/><br>
+			<input type="submit" class="submitBtn" id="setupBtn" value="Checkout"/>
+		</form>
+	</div>
+	<hr>
+
+	<div id="secured-fields-container" class="inactive">
+		<h3>Secured Fields</h3>
+		<div class="secured-fields-form">
+			<form method="POST" class="clientForm" id="adyen-encrypted-form">
+				<span class="brand-container"><img src="" class="brand-container__image" id="brand-container" alt="brand"></span>
+				<input type="hidden" name="txvariant" value="card"/><br>
+				<div class="input-container">
+		            <span class="input-label">Card number:</span>
+		            <span class="input-field" data-hosted-id="hostedCardNumberField" data-cse="encryptedCardNumber"></span>
+		        </div>
+		        <div class="input-container">
+		            <span class="input-label">Expiry date:</span>
+		            <span class="input-field" data-hosted-id="hostedExpiryDateField" data-cse="encryptedExpiryDate"></span>
+		        </div>
+		        <div class="input-container">
+		            <span class="input-label label-security-code">Security code:</span>
+		            <span class="input-field" data-hosted-id="hostedSecurityCodeField" data-cse="encryptedSecurityCode"></span>
+		        </div>
+				<input type="submit" class="submitBtn" id="checkoutBtn" value="Pay"/>
+			</form>
+		</div>
+	</div>
+
+	<div id="verifyContainer" class="inactive">
+		<h3>Verify</h3>
+		<input type="button" id="verifyBtn" value="Verify Payment"/>
+		<div id="verifyResult"></div>
+	</div>
+	<div id="output"></div>
+</body>
+
+<script>
+
+initForms();
+
+</script>

@@ -1,0 +1,206 @@
+#output {
+	width: 100%;
+	overflow-wrap: break-word;
+}
+
+.inputHolder {
+	text-align: right;
+}
+
+.index-header {
+	margin-bottom: 0px;
+}
+
+.inactive {
+	visibility: hidden;
+}
+
+.secured-fields-form {
+	width: 350px;
+}
+
+.checkout-iframe {
+	border: 1px black dashed;
+	width: 80%;
+	height: 80%;
+	text-align: center;
+
+	animation-duration: 2s;
+}
+
+.checkout {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+@keyframes shrink-checkout {
+	from {
+		height: 80%;
+	}
+
+	to {
+		height: 100px;
+	}
+}
+
+.chckt-pm__name {
+	color: #0083BF !important;
+}
+
+.clientForm {
+	border: 2px solid;
+	border-radius: 3px;
+	padding: 10px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.formHolder {
+	display: inline-block;
+	margin: 10px;
+}
+
+button, .submitBtn {
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+	border: 4px solid #3C8A2E;
+	border-radius: 15px;
+	background-color: #3C8A2E;
+	color: white;
+	
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.cardType {
+	border: 2px solid;
+	padding: 1px;
+	display: inline-block;
+	font-weight: bold;
+	font-family: serif;
+	margin-bottom: 5px;
+}
+
+.block {
+	display: block;
+}
+
+.center {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+body {
+	font-family: "Open sans", sans-serif;
+	padding: 20px;
+}
+
+/* From Secured Fields */
+.payment-div {
+	margin: 0 auto;
+	width: 60%;
+}
+
+.input-container {
+	float: left;
+	margin-top: 8px;
+	position: relative;
+	width: 100%;
+}
+
+.input-field {
+	border: 1px solid #dedede;
+	border-radius: 2px;
+	float: left;
+	height: 30px;
+	padding: 0 0 0 6px;
+	margin-top: 6px;
+	position: relative;
+	width: 300px;
+}
+
+.input-label {
+	float: left;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	position: relative;
+	width: 100%;
+}
+
+.custom-field {
+	float: left;
+	position: relative;
+	width: 300px;
+}
+
+
+.button--pay {
+	color: #fff;
+	background-color: #0abf53;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border: none;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	height: 40px;
+	padding-top: 2px;
+	margin-top: 20px;
+	width: 310px;
+}
+
+.button--pay.disabled {
+	pointer-events: none;
+	opacity: .5;
+}
+
+.brand-container__image {
+	width: 40px;
+}
+
+/* From Checkout SDK */
+.content {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.explanation {
+	margin: 20px auto 0;
+	position: relative;
+	width: 60%;
+}
+
+.checkout-container {
+	float: left;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+
+.form-div {
+	margin: 0 auto;
+	position: relative;
+	width: 60%;
+}
+
+.payment-div {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+
+@media (max-width: 520px) {
+	.explanation {
+		width: 100%;
+	}
+
+	.form-div {
+		width: 100%;
+	}
+}
